@@ -185,13 +185,13 @@ while True:
                 vin = float(input("Digite qual será o nível da vinheta do filtro: "))
 
                 while True:
-                    print("Você quer colocar uma cor matriz no filtro?")
+                    print("Você quer colocar uma cor matiz no filtro?")
                     resp_cor = input("Digite 'S' ou 'N': ").upper()
                     if resp_cor in ["S", "SIM"]:
-                        cor = input("Digite a cor matriz do filtro: ")
+                        cor = input("Digite a cor matiz do filtro: ")
                         break
                     elif resp_cor in ["N", "NAO", "NÃO"]:
-                        cor = "Não tem cor Matriz."
+                        cor = "Não tem cor Matiz."
                         break
                     else:
                         print("Resposta invalida! Digite novamente.")
