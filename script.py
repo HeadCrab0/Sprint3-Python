@@ -35,7 +35,7 @@ def filtro_person():
 
 
 def predefinicoes(tema_atual, modo_atual):
-    print("Qual desses você deseja usar? (1 - Tema ||| 2 - Modo)")
+    print("Qual desses você deseja usar? (1 - Tema ||| 2 - Modo ||| 3 - Retornar)")
     resposta = int(input("Digite: "))
 
     if resposta == 1:
@@ -95,8 +95,11 @@ def predefinicoes(tema_atual, modo_atual):
             print("Retornando ao menu...")
             return tema_atual, novo_modo
         else:
-            print("Resposta invalida! Retornando ao menu.")
+            print("Resposta invalida! Retornando ao menu...")
             return tema_atual, modo_atual
+    elif resposta == 3:
+        print('Retornando ao menu...')
+        return tema_atual, modo_atual
     else:
         print("Resposta invalida! Retornando ao menu.")
         return tema_atual, modo_atual
@@ -246,6 +249,7 @@ while True:
         print("-------------------")
         print("1 - Tema")
         print("2 - Modo")
+        print('3 - Retornar')
         print("-------------------")
         tema, modo = predefinicoes(tema, modo)
 
