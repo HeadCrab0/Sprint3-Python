@@ -8,7 +8,7 @@ filtro = "Nenhum"
 foco = 10
 tema = "Nenhum"
 modo = "Escuro"
-
+opcao = "oi"
 
 
 # funções
@@ -109,16 +109,23 @@ def predefinicoes(tema_atual, modo_atual):
 # código
 
 while True:
-    print("-------------------")
-    print("MOODSHOT")
-    print("1 - Alterar Foco")
-    print("2 - Filtros")
-    print("3 - Predefinições")
-    print("4 - Histórico de ações")
-    print("5 - Sair")
-    print("-------------------")
+    while opcao != int:
+        print("-------------------")
+        print("MOODSHOT")
+        print("1 - Alterar Foco")
+        print("2 - Filtros")
+        print("3 - Predefinições")
+        print("4 - Histórico de ações")
+        print("5 - Sair")
+        print("-------------------")
 
-    opcao = int(input("Digite sua opção: "))
+        opcao = input("Digite sua opção: ")
+        if opcao in ["1","2","3","4","5"]:
+            opcao = int(opcao)
+            break
+
+        else:
+            print('Opção inválida! Tente novamente.')
 
     if opcao < 1 or opcao > 5:
         print("Opção invalida!")
